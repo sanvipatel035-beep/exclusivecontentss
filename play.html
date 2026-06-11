@@ -151,20 +151,20 @@
             </a>
 
             <div class="iframe-wrapper">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                <iframe id="video-iframe" src="" allowfullscreen></iframe>
             </div>
 
             <div class="video-details">
                 <div class="vd-tags">
                     <span class="vd-tag">PREMIUM</span>
-                    <span class="vd-tag">DEPARTMENT 01</span>
+                    <span class="vd-tag">EXCLUSIVE</span>
                 </div>
-                <h1 class="video-title">Midnight Desires - Exclusive Scene</h1>
+                <h1 class="video-title" id="video-title">Loading...</h1>
                 <div class="video-stats">
-                    <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 125K views</span>
-                    <span>Added 2 days ago</span>
+                    <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> <span id="video-views">100K views</span></span>
+                    <span>Added recently</span>
                 </div>
-                <p class="video-desc">This is an exclusive premium video content. Make sure your embed code is pasted correctly in the iframe wrapper section of the code.</p>
+                <p class="video-desc">This is an exclusive premium video content. Enjoy the seamless playback below.</p>
             </div>
         </div>
 
@@ -197,7 +197,7 @@
                 const welcomeSplash = document.getElementById("welcome-splash");
                 const lockScreen = document.getElementById("lock-screen");
                 const mainContent = document.getElementById("main-content");
-                sessionStorage.setItem("unlocked", "true");
+                sessionStorage.setItem("unlocked", "true"); 
 
                 inputWrapper.style.opacity = "0";
                 inputWrapper.style.transform = "scale(0.95)";
@@ -218,24 +218,67 @@
                 const errorMsg = document.getElementById("error-msg");
                 errorMsg.style.display = "block";
                 document.getElementById("password-input").value = "";
-                const box = document.getElementById("main-lock-box");
-                box.style.transform = "translateX(-10px)";
-                setTimeout(() => box.style.transform = "translateX(10px)", 100);
-                setTimeout(() => box.style.transform = "translateX(-10px)", 200);
-                setTimeout(() => box.style.transform = "translateX(0)", 300);
-            }
-        }
-
-        window.onload = function() {
-            if (sessionStorage.getItem("unlocked") === "true") {
-                document.getElementById("lock-screen").style.display = "none";
-                document.getElementById("main-content").style.display = "block";
             }
         }
 
         document.getElementById("password-input").addEventListener("keyup", function(event) {
             if (event.key === "Enter") checkPassword();
         });
+
+
+        // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+        // ⬇️👇⬇️👇 YAHAN HAI AAPKA VIDEO DATABASE 👇⬇️👇⬇️
+        // YAHAN PAR AAPKO NAYE VIDEOS KE NAAM AUR LINK DAALNE HAIN
+        // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+        
+        const videoDatabase = {
+            "1": {
+                title: "Midnight Desires",
+                embedUrl: "YAHAN_VIDEO_1_KA_EMBED_URL_DAALEIN",
+                views: "125K views"
+            },
+            "2": {
+                title: "Private Moments",
+                embedUrl: "YAHAN_VIDEO_2_KA_EMBED_URL_DAALEIN",
+                views: "98K views"
+            },
+            "3": {
+                title: "Forbidden Passions",
+                embedUrl: "YAHAN_VIDEO_3_KA_EMBED_URL_DAALEIN",
+                views: "76K views"
+            },
+            "4": {
+                title: "Secret Fantasies",
+                embedUrl: "YAHAN_VIDEO_4_KA_EMBED_URL_DAALEIN",
+                views: "64K views"
+            }
+        };
+
+        // ==========================================
+        // DYNAMIC VIDEO LOGIC END
+        // ==========================================
+
+        window.onload = function() {
+            // Screen unlock check
+            if (sessionStorage.getItem("unlocked") === "true") {
+                document.getElementById("lock-screen").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }
+
+            // Get 'vid' parameter from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoId = urlParams.get('vid');
+
+            // Agar URL me ID hai aur database me milti hai to details load karo
+            if (videoId && videoDatabase[videoId]) {
+                document.getElementById('video-iframe').src = videoDatabase[videoId].embedUrl;
+                document.getElementById('video-title').innerText = videoDatabase[videoId].title;
+                document.getElementById('video-views').innerText = videoDatabase[videoId].views;
+            } else {
+                // Agar koi galat link par aata hai
+                document.getElementById('video-title').innerText = "Video Not Found";
+            }
+        };
     </script>
 </body>
 </html>
