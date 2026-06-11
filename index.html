@@ -43,7 +43,6 @@
         #error-msg { color: #ff4757; margin-top: 15px; font-size: 13px; display: none; font-weight: 500; }
         .features-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         
-        /* Auto-fit grid to fix mobile overlapping issue */
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 40px; }
         
         .feature-item { display: flex; align-items: flex-start; gap: 15px; text-align: left; }
@@ -114,20 +113,32 @@
         .b-text h4 { font-size: 14px; margin-bottom: 3px; }
         .b-text p { font-size: 12px; color: var(--text-muted); }
 
-        /* Responsive Breakpoints - Mobile Optimization added here */
+        /* =========================================
+           Mobile Optimization & Fixes
+           ========================================= */
         @media (max-width: 992px) { 
-            .bottom-features { gap: 30px; } 
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .bottom-features { flex-wrap: wrap; gap: 30px; } 
+        }
+        @media (max-width: 768px) {
+            .features-grid, .cards-grid { grid-template-columns: 1fr; }
+            .hero-features { flex-direction: column; gap: 20px; }
+            
+            /* Mobile Footer Re-order Fix */
+            .lock-footer { flex-direction: column; gap: 25px; text-align: center; display: flex; }
+            .footer-right { order: 1; margin-bottom: 5px; font-size: 14px; }
+            .footer-center { order: 2; flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .footer-left { order: 3; align-items: center; margin-top: 10px; }
         }
         @media (max-width: 600px) { 
-            .features-grid, .cards-grid { grid-template-columns: 1fr; }
             .features-container { padding: 0 20px; } 
-            .lock-footer { flex-direction: column; gap: 20px; text-align: center; } 
             .lock-navbar { padding: 20px; } 
             .lock-center-container h2 { font-size: 24px; } 
             .hero h1 { font-size: 42px; } 
             .hero-bg-img { width: 100%; opacity: 0.3; } 
-            .dept-card { flex-direction: column; padding: 20px; } 
+            .dept-card { flex-direction: column; padding: 20px; text-align: center; } 
             .card-content { max-width: 100%; } 
+            .card-tag { justify-content: center; }
             .mockup-container { display: none; } 
         }
     </style>
