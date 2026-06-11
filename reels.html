@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15D Memories - Videos</title>
+    <title>15D Memories - Sassy Saniya Sexy Content</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
@@ -71,49 +71,72 @@
         .nav-links a.active { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 5px; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* VIDEOS SECTION CSS */
-        #videos-view { padding-bottom: 20px; animation: fadeInMain 0.6s ease forwards; }
-        .vd-hero-container { position: relative; width: 100%; min-height: 70vh; display: flex; align-items: center; padding: 0 5%; border-bottom: 1px solid rgba(255,255,255,0.05); background: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1600&auto=format&fit=crop') center 20%/cover no-repeat; }
-        .vd-hero-container::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #050505 20%, rgba(5,5,5,0.8) 50%, transparent 100%); }
-        .vd-hero-content { position: relative; z-index: 2; max-width: 650px; }
-        .vd-title { font-family: 'Playfair Display', serif; font-size: 72px; color: var(--gold); line-height: 1.1; margin-bottom: 10px; }
-        .vd-subtitle { font-size: 28px; font-weight: 500; margin-bottom: 15px; color: #fff; }
-        .vd-desc { font-size: 16px; color: #aaa; margin-bottom: 35px; line-height: 1.6; }
-        .hero-buttons { display: flex; gap: 20px; margin-bottom: 50px; }
-        .btn-primary { background: var(--gold); color: black; border: none; padding: 15px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 15px; transition: 0.3s; }
-        .btn-primary:hover { background: var(--gold-hover); }
-        .btn-secondary { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); padding: 15px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; font-size: 15px; transition: 0.3s; }
-        .btn-secondary:hover { border-color: white; }
-        .hero-features { display: flex; gap: 40px; }
-        .feature-box { display: flex; gap: 15px; align-items: flex-start; }
-        .feature-box svg { color: var(--gold); width: 24px; height: 24px; }
-        .feature-box h4 { font-size: 14px; margin-bottom: 5px; color:#fff;}
-        .feature-box p { font-size: 13px; color: var(--text-muted); margin: 0; }
-        .vd-play-overlay { position: absolute; right: 15%; top: 50%; transform: translateY(-50%); width: 80px; height: 80px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 2; cursor: pointer; transition: 0.3s; }
-        .vd-play-overlay:hover { background: rgba(220,168,88,0.8); border-color: var(--gold); }
-        .vd-filters-wrapper { padding: 25px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 20px; }
-        .vd-filter-tabs { display: flex; gap: 12px; flex-wrap: wrap; }
-        .vd-tab { background: #111; border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #ccc; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
-        .vd-tab.active, .vd-tab:hover { background: rgba(220, 168, 88, 0.05); border-color: var(--gold); color: var(--gold); }
-        .vd-filter-selects { display: flex; gap: 15px; }
-        .vd-select { background: #0a0a0a; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 13px; cursor: pointer; outline: none; display: flex; align-items: center; gap: 10px; }
-        .vd-grid { padding: 40px 5%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .vd-card { background: var(--reels-card); border: 1px solid var(--reels-border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
-        .vd-card:hover { transform: translateY(-5px); border-color: rgba(220,168,88,0.3); }
-        .vd-thumbnail { position: relative; aspect-ratio: 16/9; background: #222; }
-        .vd-thumbnail img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.3s; }
-        .vd-card:hover .vd-thumbnail img { opacity: 1; }
-        .vd-tag-premium { position: absolute; top: 12px; left: 12px; background: var(--gold); color: #000; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 4px; }
-        .vd-tag-duration { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.8); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 500;}
-        .vd-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45px; height: 45px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .vd-card:hover .vd-play-btn { background: rgba(220,168,88,0.8); border-color: var(--gold); }
-        .vd-play-btn svg { width: 18px; height: 18px; fill: #fff; margin-left: 2px; }
-        .vd-info { padding: 15px 15px 20px 15px; position: relative; }
-        .vd-title-text { font-size: 15px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; color: #fff;}
+        /* REELS SECTION CSS */
+        #reels-view { padding: 30px 5%; animation: fadeInMain 0.6s ease forwards; }
+        .rl-back-btn { display: inline-flex; align-items: center; gap: 8px; color: #a0a0a0; font-size: 14px; font-weight: 500; cursor: pointer; margin-bottom: 30px; transition: color 0.3s; text-decoration: none; }
+        .rl-back-btn:hover { color: #fff; }
+        .rl-layout { display: grid; grid-template-columns: minmax(auto, 600px) 380px; gap: 40px; justify-content: center; align-items: start; }
+        .rl-player-wrapper { position: relative; width: 100%; border-radius: 20px; overflow: hidden; background: #111; box-shadow: 0 10px 40px rgba(0,0,0,0.5); border: 1px solid var(--reels-border); }
+        .rl-video-container { position: relative; width: 100%; aspect-ratio: 9/16; background: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop') center/cover no-repeat; }
+        .rl-gradient-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 30%, transparent 50%, rgba(0,0,0,0.4) 100%); pointer-events: none; }
+        .rl-tag-premium { position: absolute; top: 20px; left: 20px; background: var(--gold); color: #000; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 6px; letter-spacing: 1px; }
+        .rl-volume { position: absolute; top: 20px; right: 20px; color: #fff; cursor: pointer; }
+        .rl-side-actions { position: absolute; right: 15px; bottom: 120px; display: flex; flex-direction: column; gap: 20px; align-items: center; z-index: 10; }
+        .rl-action-item { display: flex; flex-direction: column; align-items: center; gap: 5px; color: #fff; cursor: pointer; transition: transform 0.2s; }
+        .rl-action-item:hover { transform: scale(1.1); }
+        .rl-action-item svg { width: 28px; height: 28px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+        .rl-action-item span { font-size: 12px; font-weight: 600; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        .rl-avatar-action { position: relative; width: 44px; height: 44px; border-radius: 50%; border: 2px solid #fff; background: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200') center/cover; margin-bottom: 10px; }
+        .rl-plus-badge { position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); background: #ff2a5f; color: #fff; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; border: 2px solid #111; }
+        .rl-bottom-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; z-index: 5; }
+        .rl-user-title { display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 600; margin-bottom: 8px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
         .rl-verified { color: var(--gold); width: 14px; height: 14px; }
-        .vd-dept-text { font-size: 12px; color: #888; margin-bottom: 8px; }
-        .vd-views-text { font-size: 12px; color: #666; display: flex; align-items: center; gap: 5px; }
-        .vd-more-icon { position: absolute; right: 15px; bottom: 20px; color: #aaa; }
+        .rl-caption { font-size: 14px; line-height: 1.4; margin-bottom: 15px; color: #eaeaea; text-shadow: 0 1px 3px rgba(0,0,0,0.8); }
+        .rl-caption span { color: var(--gold); cursor: pointer; }
+        .rl-music-ticker { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #ccc; margin-bottom: 15px; }
+        .rl-controls-bar { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; font-size: 12px; color: #ccc; }
+        .rl-play-info { display: flex; align-items: center; gap: 15px; }
+        .rl-progress-line { position: absolute; bottom: 50px; left: 20px; right: 20px; height: 3px; background: rgba(255,255,255,0.3); border-radius: 2px; }
+        .rl-progress-fill { width: 45%; height: 100%; background: var(--gold); border-radius: 2px; position: relative; }
+        .rl-progress-fill::after { content: ''; position: absolute; right: -5px; top: -3px; width: 9px; height: 9px; background: #fff; border-radius: 50%; }
+        .rl-auto-next { display: flex; align-items: center; gap: 8px; }
+        .rl-toggle { width: 32px; height: 18px; background: var(--gold); border-radius: 10px; position: relative; cursor: pointer; }
+        .rl-toggle::after { content: ''; position: absolute; right: 2px; top: 2px; width: 14px; height: 14px; background: #000; border-radius: 50%; }
+        .rl-creator-card { background: var(--reels-card); border: 1px solid var(--reels-border); border-radius: 12px; padding: 20px; margin-top: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .rl-creator-left { display: flex; align-items: center; gap: 15px; }
+        .rl-creator-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+        .rl-creator-name { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+        .rl-creator-handle { font-size: 13px; color: #888; margin-top: 3px; }
+        .rl-creator-actions { display: flex; gap: 10px; }
+        .rl-btn-follow { background: var(--gold); color: #000; border: none; font-weight: 600; padding: 8px 20px; border-radius: 6px; cursor: pointer; font-size: 13px; }
+        .rl-btn-icon { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+        .rl-description-box { margin-top: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--reels-border); }
+        .rl-desc-text { font-size: 14px; color: #ccc; line-height: 1.6; margin-bottom: 15px; }
+        .rl-hashtags { display: flex; gap: 10px; flex-wrap: wrap; }
+        .rl-hash { background: #1a1a1a; padding: 6px 12px; border-radius: 4px; font-size: 12px; color: #aaa; }
+        .rl-sidebar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .rl-sidebar-title { font-size: 16px; font-weight: 600; }
+        .rl-upnext-list { background: var(--reels-card); border: 1px solid var(--reels-border); border-radius: 12px; padding: 15px; display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
+        .rl-upnext-item { display: flex; gap: 15px; align-items: center; cursor: pointer; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .rl-upnext-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .rl-thumb-box { position: relative; width: 80px; height: 110px; border-radius: 8px; overflow: hidden; background: #222; flex-shrink: 0; }
+        .rl-thumb-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+        .rl-thumb-dur { position: absolute; bottom: 5px; right: 5px; background: rgba(0,0,0,0.8); font-size: 10px; padding: 2px 4px; border-radius: 4px; }
+        .rl-thumb-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0.5; }
+        .rl-upnext-info { flex-grow: 1; }
+        .rl-upnext-tag { display: inline-block; background: rgba(220, 168, 88, 0.2); color: var(--gold); font-size: 9px; padding: 3px 6px; border-radius: 4px; margin-bottom: 6px; font-weight: 600; }
+        .rl-upnext-title { font-size: 14px; font-weight: 500; margin-bottom: 5px; line-height: 1.3; }
+        .rl-upnext-user { font-size: 12px; color: #888; display: flex; align-items: center; gap: 4px; margin-bottom: 4px; }
+        .rl-upnext-views { font-size: 11px; color: #666; }
+        .rl-related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 30px; }
+        .rl-rel-card { position: relative; aspect-ratio: 9/16; border-radius: 8px; overflow: hidden; }
+        .rl-rel-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.3s; }
+        .rl-rel-card:hover img { opacity: 1; transform: scale(1.05); cursor: pointer;}
+        .rl-rel-stats { position: absolute; bottom: 5px; left: 5px; font-size: 10px; display: flex; align-items: center; gap: 3px; }
+        .rl-banner-promo { background: linear-gradient(to right, #1f140b, #0a0a0a); border: 1px solid rgba(220, 168, 88, 0.2); border-radius: 12px; padding: 25px; position: relative; overflow: hidden; }
+        .rl-banner-promo h3 { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 10px; }
+        .rl-banner-promo p { font-size: 13px; color: #aaa; margin-bottom: 20px; line-height: 1.5; max-width: 60%; }
+        .rl-banner-bg { position: absolute; right: -20px; top: 0; height: 100%; opacity: 0.4; }
 
         .bottom-features { display: flex; justify-content: center; gap: 60px; padding: 40px 5%; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
         .b-feature { display: flex; align-items: center; gap: 15px; }
@@ -121,9 +144,9 @@
         .b-text h4 { font-size: 14px; margin-bottom: 3px; }
         .b-text p { font-size: 12px; color: var(--text-muted); }
 
-        @media (max-width: 1024px) { .vd-grid { grid-template-columns: repeat(2, 1fr); } .vd-play-overlay { display: none; } }
+        @media (max-width: 1024px) { .rl-layout { grid-template-columns: 1fr; } .rl-sidebar { max-width: 600px; margin: 0 auto; width: 100%; } .rl-player-wrapper { max-width: 600px; margin: 0 auto; } }
         @media (max-width: 992px) { .features-grid { grid-template-columns: repeat(2, 1fr); } .bottom-features { flex-wrap: wrap; gap: 30px; } }
-        @media (max-width: 600px) { .vd-grid { grid-template-columns: 1fr; } .vd-hero-container { min-height: 50vh; } .vd-title { font-size: 42px; } .vd-subtitle { font-size: 20px; } .features-grid { grid-template-columns: 1fr; } .lock-footer { flex-direction: column; gap: 20px; text-align: center; } .lock-navbar { padding: 20px; } .lock-center-container h2 { font-size: 24px; } }
+        @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } .lock-footer { flex-direction: column; gap: 20px; text-align: center; } .lock-navbar { padding: 20px; } .lock-center-container h2 { font-size: 24px; } }
     </style>
 </head>
 <body>
@@ -173,105 +196,113 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="reels.html">Reels</a>
-                <a href="videos.html" class="active">Videos</a>
+                <a href="reels.html" class="active">Reels</a>
+                <a href="videos.html">Videos</a>
             </div>
         </nav>
 
-        <div id="videos-view">
-            <div class="vd-hero-container">
-                <div class="vd-hero-content">
-                    <h1 class="vd-title">Videos.</h1>
-                    <h2 class="vd-subtitle">Cinematic. Immersive. Unforgettable.</h2>
-                    <p class="vd-desc">Premium horizontal videos for the ultimate thrill.<br>Two departments. Unlimited desires.</p>
-                    
-                    <div class="hero-buttons">
-                        <button class="btn-primary">Explore Videos &nbsp; ❯</button>
-                        <button class="btn-secondary">How It Works &nbsp; ❯</button>
+        <div id="reels-view">
+            <a href="index.html" class="rl-back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg> Back to Home
+            </a>
+
+            <div class="rl-layout">
+                <div>
+                    <div class="rl-player-wrapper">
+                        <div class="rl-video-container">
+                            <div class="rl-gradient-overlay"></div>
+                            <div class="rl-tag-premium">PREMIUM</div>
+                            <div class="rl-volume"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
+
+                            <div class="rl-side-actions">
+                                <div class="rl-avatar-action"><div class="rl-plus-badge">+</div></div>
+                                <div class="rl-action-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span>12.5K</span></div>
+                                <div class="rl-action-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span>865</span></div>
+                                <div class="rl-action-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg><span>Save</span></div>
+                                <div class="rl-action-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="2"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="2"/></svg><span>1.2K</span></div>
+                                <div class="rl-action-item" style="margin-top: 10px;"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="12" cy="19" r="2"/></svg></div>
+                            </div>
+
+                            <div class="rl-bottom-content">
+                                <div class="rl-user-title">@alexarae <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                                <div class="rl-caption">When the lights go down... ✨<br><span>#exclusive</span> <span>#sexy</span> <span>#reels</span></div>
+                                <div class="rl-music-ticker"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 18c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13-14v11c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3v-7h4v-4h-4z"/></svg> Original Sound</div>
+                                <div class="rl-progress-line"><div class="rl-progress-fill"></div></div>
+                                <div class="rl-controls-bar">
+                                    <div class="rl-play-info"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg> 00:07 / 00:15</div>
+                                    <div class="rl-auto-next">Auto Next <div class="rl-toggle"></div> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 10px;"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="hero-features">
-                        <div class="feature-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><div><h4>Exclusive</h4><p>Premium Content</p></div></div>
-                        <div class="feature-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><div><h4>Private</h4><p>Secure & Safe</p></div></div>
-                        <div class="feature-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path></svg><div><h4>Premium</h4><p>Quality Experience</p></div></div>
+                    <div class="rl-creator-card">
+                        <div class="rl-creator-left">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200" class="rl-creator-avatar">
+                            <div>
+                                <div class="rl-creator-name">Alexarae <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+                                <div class="rl-creator-handle">@alexarae • 125K Followers</div>
+                            </div>
+                        </div>
+                        <div class="rl-creator-actions">
+                            <button class="rl-btn-follow">Follow</button>
+                            <button class="rl-btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/></svg></button>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="vd-play-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                </div>
-            </div>
 
-            <div class="vd-filters-wrapper">
-                <div class="vd-filter-tabs">
-                    <div class="vd-tab active"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/></svg> All Videos</div>
-                    <div class="vd-tab"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17 2H7C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5zm-5 13.5v-7l6 3.5-6 3.5z"/></svg> Department 01</div>
-                    <div class="vd-tab"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 12V9l5 3-5 3z"/></svg> Department 02</div>
-                    <div class="vd-tab"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Top Rated</div>
-                    <div class="vd-tab"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> Most Viewed</div>
-                    <div class="vd-tab"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Recently Added</div>
-                </div>
-                
-                <div class="vd-filter-selects">
-                    <div class="vd-select">All Durations <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-                    <div class="vd-select">Latest <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
-                </div>
-            </div>
-
-            <div class="vd-grid">
-                <div class="vd-card">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">24:35</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Midnight Desires <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-dept-text">Department 01</div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 125K views</div>
-                        <svg class="vd-more-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
-                    </div>
-                </div>
-
-                <div class="vd-card">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">36:12</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Private Moments <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-dept-text">Department 02</div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 98K views</div>
-                        <svg class="vd-more-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                    <div class="rl-description-box">
+                        <div class="rl-desc-text">When the lights go down, another side comes out.<br>Only for you. Only here. ✨</div>
+                        <div class="rl-hashtags"><span class="rl-hash">#exclusive</span><span class="rl-hash">#sexy</span><span class="rl-hash">#reels</span><span class="rl-hash">#premium</span><span class="rl-hash">#hot</span></div>
                     </div>
                 </div>
 
-                <div class="vd-card">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">18:42</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                <div class="rl-sidebar">
+                    <div class="rl-sidebar-header">
+                        <span class="rl-sidebar-title">Up Next</span>
+                        <div class="rl-auto-next" style="font-size: 13px; color:#aaa;">Autoplay <div class="rl-toggle"></div></div>
                     </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Forbidden Passions <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-dept-text">Department 01</div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 76K views</div>
-                        <svg class="vd-more-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                    <div class="rl-upnext-list">
+                        <div class="rl-upnext-item">
+                            <div class="rl-thumb-box"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200"><div class="rl-thumb-play"><svg width="24" height="24" fill="white"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div><div class="rl-thumb-dur">0:18</div></div>
+                            <div class="rl-upnext-info">
+                                <div class="rl-upnext-tag">PREMIUM</div><div class="rl-upnext-title">Late Night Vibes</div><div class="rl-upnext-user">@alexarae <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="rl-upnext-views">24.7K views</div>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" color="#888"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                        </div>
+                        <div class="rl-upnext-item">
+                            <div class="rl-thumb-box"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=200"><div class="rl-thumb-dur">0:22</div></div>
+                            <div class="rl-upnext-info">
+                                <div class="rl-upnext-tag">PREMIUM</div><div class="rl-upnext-title">Hotel Memories</div><div class="rl-upnext-user">@brittany.lux <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="rl-upnext-views">19.3K views</div>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" color="#888"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                        </div>
+                        <div class="rl-upnext-item">
+                            <div class="rl-thumb-box"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200"><div class="rl-thumb-dur">0:15</div></div>
+                            <div class="rl-upnext-info">
+                                <div class="rl-upnext-tag">PREMIUM</div><div class="rl-upnext-title">Just Me</div><div class="rl-upnext-user">@miss.celine <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div class="rl-upnext-views">17.8K views</div>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" color="#888"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                        </div>
                     </div>
-                </div>
 
-                <div class="vd-card">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">29:17</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+                    <div class="rl-sidebar-header">
+                        <span class="rl-sidebar-title">Related Reels</span>
+                        <a href="#" style="color:var(--gold); font-size:12px; text-decoration:none;">View All</a>
                     </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Secret Fantasies <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-dept-text">Department 02</div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 64K views</div>
-                        <svg class="vd-more-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                    <div class="rl-related-grid">
+                        <div class="rl-rel-card"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=200"><div style="position:absolute; top:4px; left:4px; background:var(--gold); color:#000; font-size:7px; font-weight:bold; padding:2px 4px; border-radius:3px;">PREMIUM</div><div style="position:absolute; top:4px; right:4px; background:rgba(0,0,0,0.6); font-size:9px; padding:2px 4px; border-radius:3px;">0:19</div><div class="rl-rel-stats"><svg width="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> 14.6K</div></div>
+                        <div class="rl-rel-card"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200"><div style="position:absolute; top:4px; left:4px; background:var(--gold); color:#000; font-size:7px; font-weight:bold; padding:2px 4px; border-radius:3px;">PREMIUM</div><div style="position:absolute; top:4px; right:4px; background:rgba(0,0,0,0.6); font-size:9px; padding:2px 4px; border-radius:3px;">0:17</div><div class="rl-rel-stats"><svg width="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> 13.1K</div></div>
+                        <div class="rl-rel-card"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200"><div style="position:absolute; top:4px; left:4px; background:var(--gold); color:#000; font-size:7px; font-weight:bold; padding:2px 4px; border-radius:3px;">PREMIUM</div><div style="position:absolute; top:4px; right:4px; background:rgba(0,0,0,0.6); font-size:9px; padding:2px 4px; border-radius:3px;">0:21</div><div class="rl-rel-stats"><svg width="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> 12.9K</div></div>
+                        <div class="rl-rel-card"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200"><div style="position:absolute; top:4px; left:4px; background:var(--gold); color:#000; font-size:7px; font-weight:bold; padding:2px 4px; border-radius:3px;">PREMIUM</div><div style="position:absolute; top:4px; right:4px; background:rgba(0,0,0,0.6); font-size:9px; padding:2px 4px; border-radius:3px;">0:16</div><div class="rl-rel-stats"><svg width="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> 11.3K</div></div>
+                    </div>
+
+                    <div class="rl-banner-promo">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=400" class="rl-banner-bg">
+                        <div style="position:relative; z-index:2;">
+                            <h3>Unlock Unlimited Reels</h3>
+                            <p>Join Premium and enjoy unlimited access to exclusive vertical content.</p>
+                            <button class="btn-primary" style="padding:10px 20px; font-size:13px;"><svg width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg> Join Premium Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -306,7 +337,7 @@
                 const welcomeSplash = document.getElementById("welcome-splash");
                 const lockScreen = document.getElementById("lock-screen");
                 const mainContent = document.getElementById("main-content");
-                sessionStorage.setItem("unlocked", "true");
+                sessionStorage.setItem("unlocked", "true"); 
 
                 inputWrapper.style.opacity = "0";
                 inputWrapper.style.transform = "scale(0.95)";
