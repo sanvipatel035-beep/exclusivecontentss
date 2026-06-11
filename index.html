@@ -252,7 +252,7 @@
                 const welcomeSplash = document.getElementById("welcome-splash");
                 const lockScreen = document.getElementById("lock-screen");
                 const mainContent = document.getElementById("main-content");
-                sessionStorage.setItem("unlocked", "true"); // Saves session for smooth navigation
+                sessionStorage.setItem("unlocked", "true"); 
 
                 inputWrapper.style.opacity = "0";
                 inputWrapper.style.transform = "scale(0.95)";
@@ -281,7 +281,6 @@
             }
         }
 
-        // Auto unlock if session exists to avoid locking on every page change
         window.onload = function() {
             if (sessionStorage.getItem("unlocked") === "true") {
                 document.getElementById("lock-screen").style.display = "none";
