@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15D Memories - Sassy Saniya Sexy Content</title>
+    <title>15D Memories - Videos</title>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
         :root {
+            /* User Images */
             --hero-img-1: url('https://px.hdpornpics.xxx/thumbs/extra_thumb/188/890_brunette.webp');
             --hero-img-2: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/38000/38647/609547.jpg');
             --hero-img-3: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/38000/38647/609548.jpg');
@@ -27,12 +30,8 @@
             --hero-img-18: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/23000/23910/379816.jpg');
             --hero-img-19: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/23000/23910/379823.jpg');
             --hero-img-20: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/23000/23910/379822.jpg');
-        }
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
-        :root {
+            /* Theme Colors */
             --bg-dark: #0a0a0a;
             --text-main: #ffffff;
             --text-muted: #a0a0a0;
@@ -97,18 +96,25 @@
 
         /* VIDEOS SECTION CSS */
         #videos-view { padding-bottom: 20px; animation: fadeInMain 0.6s ease forwards; }
-        
-        /* Netflix Style Auto-Scrolling Background CSS */
+
+        /* NETFLIX AUTO SCROLL CONTAINER */
         .vd-hero-container { 
-            position: relative; width: 100%; min-height: 70vh; display: flex; align-items: center; 
-            padding: 0 5%; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden;
+            position: relative; 
+            width: 100%; 
+            min-height: 70vh; 
+            display: flex; 
+            align-items: flex-start; /* Changed from center to flex-start to move text UP */
+            padding: 120px 5% 0 5%; /* Added top padding to adjust position inside the black area */
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            overflow: hidden;
         }
+
         .vd-hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; display: flex; }
         
         /* Desktop Scroll Speed & Widths */
-        .vd-slide-track { display: flex; width: 400vw; height: 100%; animation: scrollHero 40s linear infinite; }
-        .slide-img { width: 33.333vw; height: 100%; background-size: cover; background-position: center; flex-shrink: 0; border-right: 3px solid #050505; }
-        @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-200vw); } }
+        .vd-slide-track { display: flex; width: 1000vw; /* Increased width for 20 images */ height: 100%; animation: scrollHero 80s linear infinite; }
+        .slide-img { width: 25vw; height: 100%; background-size: cover; background-position: center; flex-shrink: 0; border-right: 3px solid #050505; }
+        @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-500vw); } }
 
         .vd-hero-container::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #050505 20%, rgba(5,5,5,0.85) 50%, rgba(5,5,5,0.4) 100%); z-index: 1; }
         .vd-hero-content { position: relative; z-index: 2; max-width: 650px; }
@@ -127,6 +133,7 @@
         .feature-box p { font-size: 13px; color: var(--text-muted); margin: 0; }
         .vd-play-overlay { position: absolute; right: 15%; top: 50%; transform: translateY(-50%); width: 80px; height: 80px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 2; cursor: pointer; transition: 0.3s; }
         .vd-play-overlay:hover { background: rgba(220,168,88,0.8); border-color: var(--gold); }
+        
         .vd-filters-wrapper { padding: 25px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 20px; }
         .vd-filter-tabs { display: flex; gap: 12px; flex-wrap: wrap; }
         .vd-tab { background: #111; border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #ccc; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
@@ -158,12 +165,12 @@
         .b-text p { font-size: 12px; color: var(--text-muted); }
 
         /* Responsive Breakpoints */
-        @media (max-width: 992px) { 
+        @media (max-width: 1024px) { 
             .vd-grid { grid-template-columns: repeat(2, 1fr); } 
             .bottom-features { flex-wrap: wrap; gap: 30px; } 
             /* Tablet Scroll Adjustment */
-            .vd-slide-track { width: 600vw; } .slide-img { width: 50vw; }
-            @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-300vw); } }
+            .vd-slide-track { width: 1500vw; } .slide-img { width: 50vw; }
+            @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-750vw); } }
         }
         @media (max-width: 768px) {
             .lock-footer { flex-direction: column; gap: 25px; text-align: center; display: flex; }
@@ -174,14 +181,14 @@
         }
         @media (max-width: 600px) { 
             .vd-grid { grid-template-columns: 1fr; } 
-            .vd-hero-container { min-height: 50vh; } 
+            .vd-hero-container { min-height: 50vh; padding-top: 80px; } 
             .vd-title { font-size: 42px; } 
             .vd-subtitle { font-size: 20px; } 
             .lock-navbar { padding: 20px; } 
             .lock-center-container h2 { font-size: 24px; } 
             /* Mobile Scroll Adjustment */
-            .vd-slide-track { width: 1200vw; } .slide-img { width: 100vw; }
-            @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-600vw); } }
+            .vd-slide-track { width: 3000vw; } .slide-img { width: 100vw; }
+            @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-1500vw); } }
         }
     </style>
 </head>
