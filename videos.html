@@ -6,8 +6,6 @@
     <title>15D Memories - Videos</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
-
         :root {
             /* User Images */
             --hero-img-1: url('https://px.hdpornpics.xxx/thumbs/extra_thumb/188/890_brunette.webp');
@@ -30,7 +28,13 @@
             --hero-img-18: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/23000/23910/379816.jpg');
             --hero-img-19: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/23000/23910/379823.jpg');
             --hero-img-20: url('https://cdn1.sexvid.xxx/contents/photos/main/2250x450/23000/23910/379822.jpg');
+        }
+    </style>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
+        :root {
             /* Theme Colors */
             --bg-dark: #0a0a0a;
             --text-main: #ffffff;
@@ -96,23 +100,16 @@
 
         /* VIDEOS SECTION CSS */
         #videos-view { padding-bottom: 20px; animation: fadeInMain 0.6s ease forwards; }
-
-        /* NETFLIX AUTO SCROLL CONTAINER */
+        
+        /* Netflix Style Auto-Scrolling Background CSS */
         .vd-hero-container { 
-            position: relative; 
-            width: 100%; 
-            min-height: 70vh; 
-            display: flex; 
-            align-items: flex-start; /* Changed from center to flex-start to move text UP */
-            padding: 120px 5% 0 5%; /* Added top padding to adjust position inside the black area */
-            border-bottom: 1px solid rgba(255,255,255,0.05); 
-            overflow: hidden;
+            position: relative; width: 100%; min-height: 70vh; display: flex; align-items: flex-start; 
+            padding: 120px 5% 0 5%; border-bottom: 1px solid rgba(255,255,255,0.05); overflow: hidden;
         }
-
         .vd-hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; display: flex; }
         
         /* Desktop Scroll Speed & Widths */
-        .vd-slide-track { display: flex; width: 1000vw; /* Increased width for 20 images */ height: 100%; animation: scrollHero 80s linear infinite; }
+        .vd-slide-track { display: flex; width: 1000vw; height: 100%; animation: scrollHero 80s linear infinite; }
         .slide-img { width: 25vw; height: 100%; background-size: cover; background-position: center; flex-shrink: 0; border-right: 3px solid #050505; }
         @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-500vw); } }
 
@@ -131,304 +128,4 @@
         .feature-box svg { color: var(--gold); width: 24px; height: 24px; }
         .feature-box h4 { font-size: 14px; margin-bottom: 5px; color:#fff;}
         .feature-box p { font-size: 13px; color: var(--text-muted); margin: 0; }
-        .vd-play-overlay { position: absolute; right: 15%; top: 50%; transform: translateY(-50%); width: 80px; height: 80px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 2; cursor: pointer; transition: 0.3s; }
-        .vd-play-overlay:hover { background: rgba(220,168,88,0.8); border-color: var(--gold); }
-        
-        .vd-filters-wrapper { padding: 25px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; gap: 20px; }
-        .vd-filter-tabs { display: flex; gap: 12px; flex-wrap: wrap; }
-        .vd-tab { background: #111; border: 1px solid rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #ccc; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
-        .vd-tab.active, .vd-tab:hover { background: rgba(220, 168, 88, 0.05); border-color: var(--gold); color: var(--gold); }
-        .vd-filter-selects { display: flex; gap: 15px; }
-        .vd-select { background: #0a0a0a; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 13px; cursor: pointer; outline: none; display: flex; align-items: center; gap: 10px; }
-        .vd-grid { padding: 40px 5%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .vd-card { background: var(--reels-card); border: 1px solid var(--reels-border); border-radius: 12px; overflow: hidden; cursor: pointer; transition: transform 0.3s; }
-        .vd-card:hover { transform: translateY(-5px); border-color: rgba(220,168,88,0.3); }
-        .vd-thumbnail { position: relative; aspect-ratio: 16/9; background: #222; }
-        .vd-thumbnail img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.3s; }
-        .vd-card:hover .vd-thumbnail img { opacity: 1; }
-        .vd-tag-premium { position: absolute; top: 12px; left: 12px; background: var(--gold); color: #000; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 4px; }
-        .vd-tag-duration { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.8); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 500;}
-        .vd-play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 45px; height: 45px; border-radius: 50%; border: 2px solid #fff; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .vd-card:hover .vd-play-btn { background: rgba(220,168,88,0.8); border-color: var(--gold); }
-        .vd-play-btn svg { width: 18px; height: 18px; fill: #fff; margin-left: 2px; }
-        .vd-info { padding: 15px 15px 20px 15px; position: relative; }
-        .vd-title-text { font-size: 15px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; color: #fff;}
-        .rl-verified { color: var(--gold); width: 14px; height: 14px; }
-        .vd-dept-text { font-size: 12px; color: #888; margin-bottom: 8px; }
-        .vd-views-text { font-size: 12px; color: #666; display: flex; align-items: center; gap: 5px; }
-        .vd-more-icon { position: absolute; right: 15px; bottom: 20px; color: #aaa; }
-
-        .bottom-features { display: flex; justify-content: center; gap: 60px; padding: 40px 5%; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
-        .b-feature { display: flex; align-items: center; gap: 15px; }
-        .b-icon { width: 40px; height: 40px; border: 1px solid rgba(220, 168, 88, 0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold); }
-        .b-text h4 { font-size: 14px; margin-bottom: 3px; }
-        .b-text p { font-size: 12px; color: var(--text-muted); }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 1024px) { 
-            .vd-grid { grid-template-columns: repeat(2, 1fr); } 
-            .bottom-features { flex-wrap: wrap; gap: 30px; } 
-            /* Tablet Scroll Adjustment */
-            .vd-slide-track { width: 1500vw; } .slide-img { width: 50vw; }
-            @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-750vw); } }
-        }
-        @media (max-width: 768px) {
-            .lock-footer { flex-direction: column; gap: 25px; text-align: center; display: flex; }
-            .footer-right { order: 1; margin-bottom: 5px; font-size: 14px; }
-            .footer-center { order: 2; flex-wrap: wrap; justify-content: center; gap: 15px; }
-            .footer-left { order: 3; align-items: center; margin-top: 10px; }
-            .vd-play-overlay { display: none; }
-        }
-        @media (max-width: 600px) { 
-            .vd-grid { grid-template-columns: 1fr; } 
-            .vd-hero-container { min-height: 50vh; padding-top: 80px; } 
-            .vd-title { font-size: 42px; } 
-            .vd-subtitle { font-size: 20px; } 
-            .lock-navbar { padding: 20px; } 
-            .lock-center-container h2 { font-size: 24px; } 
-            /* Mobile Scroll Adjustment */
-            .vd-slide-track { width: 3000vw; } .slide-img { width: 100vw; }
-            @keyframes scrollHero { 0% { transform: translateX(0); } 100% { transform: translateX(-1500vw); } }
-        }
-    </style>
-</head>
-<body>
-
-    <div id="lock-screen">
-        <div class="lock-navbar">
-            <div class="lock-logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dca858" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg><div>Sassy Saniya<span>Sexy Content</span></div></div>
-        </div>
-        <div class="lock-center-container">
-            <div class="padlock-main-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2" ry="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-            <h2>Welcome to Sassy Saniya <span>Sexy Content</span></h2>
-            <p class="lock-subtitle-desc">Enter your private access key to unlock exclusive content and experiences.</p>
-            <div class="lock-box" id="main-lock-box">
-                <div class="lock-content-wrapper" id="input-wrapper">
-                    <div class="card-tag">◆ Exclusive Access ◆</div>
-                    <div class="input-wrapper-box">
-                        <span class="input-icon-left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></span>
-                        <input type="password" id="password-input" placeholder="Enter Access Key">
-                        <span class="input-icon-right" id="toggle-password-btn" onclick="togglePassword()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
-                    </div>
-                    <button class="btn-unlock" onclick="checkPassword()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Unlock Access</button>
-                    <p id="error-msg">Incorrect key. Please try again.</p>
-                </div>
-                <div id="welcome-splash"><div class="welcome-text">Welcome to<br><span>Sassy Saniya</span>Sexy Content</div></div>
-            </div>
-        </div>
-        <div class="features-container">
-            <div class="features-grid">
-                <div class="feature-item"><div class="feature-icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feature-text"><h3>Secure Access</h3><p>Your privacy and data are our top priority.</p></div></div>
-                <div class="feature-item"><div class="feature-icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"/></svg></div><div class="feature-text"><h3>Premium Content</h3><p>Access exclusive memories and premium experiences.</p></div></div>
-                <div class="feature-item"><div class="feature-icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="feature-text"><h3>Instant Unlock</h3><p>Quick and seamless access in seconds.</p></div></div>
-                <div class="feature-item"><div class="feature-icon-circle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg></div><div class="feature-text"><h3>Exclusive Experience</h3><p>Only for premium members.</p></div></div>
-            </div>
-        </div>
-        <div class="lock-footer">
-            <div class="footer-left"><div class="footer-logo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg> EXCLUSIVE CONTENT</div><div>&copy; 2026 Exclusive Content. All Rights Reserved.</div></div>
-            <div class="footer-center"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Refund Policy</a><a href="#">Contact Us</a></div>
-            <div class="footer-right">Made With <span style="color: #ff1493;">&hearts;</span> By Sassy Saniya</div>
-        </div>
-    </div>
-
-    <div id="main-content">
-        <nav>
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M3 20h18"/></svg>
-                <div>Sassy Saniya<span>Sexy Content</span></div>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="videos.html" class="active">Videos</a>
-            </div>
-        </nav>
-
-        <div id="videos-view">
-            <div class="vd-hero-container">
-                
-                <div class="vd-hero-slider">
-                    <div class="vd-slide-track">
-                        <div class="slide-img" style="background-image: var(--hero-img-1);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-2);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-3);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-4);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-5);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-6);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-7);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-8);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-9);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-10);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-11);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-12);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-13);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-14);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-15);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-16);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-17);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-18);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-19);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-20);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-1);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-2);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-3);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-4);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-5);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-6);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-7);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-8);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-9);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-10);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-11);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-12);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-13);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-14);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-15);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-16);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-17);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-18);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-19);"></div>
-                        <div class="slide-img" style="background-image: var(--hero-img-20);"></div>
-                    </div>
-                </div>
-
-                <div class="vd-hero-content">
-                    <h1 class="vd-title">Videos.</h1>
-                    <h2 class="vd-subtitle">Cinematic. Immersive. Unforgettable.</h2>
-                    <p class="vd-desc">Premium horizontal videos for the ultimate thrill.<br>Two departments. Unlimited desires.</p>
-                </div>
-            </div>
-
-            <div class="vd-grid">
-                
-                <div class="vd-card" onclick="window.location.href='play.html?vid=1'">
-                    <div class="vd-thumbnail">
-                        <img src="https://imgs.search.brave.com/kRDUh6XXe3rmKndxlnAxbDPltDOGkSZQUGWuxOA-VzU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9laS5w/aG5jZG4uY29tL3Zp/ZGVvcy8yMDI1MDYv/MTgvNDcwNDk4Njc1/L29yaWdpbmFsLyht/PXEyNk9RTDBiZUdO/ZEhnYWFhYSkobWg9/VVZxZFhEQ1JqUHBY/SDNnRCkwLmpwZw">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">24:35</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Midnight Desires <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 125K views</div>
-                    </div>
-                </div>
-
-                <div class="vd-card" onclick="window.location.href='play.html?vid=2'">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">36:12</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Private Moments <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 98K views</div>
-                    </div>
-                </div>
-
-                <div class="vd-card" onclick="window.location.href='play.html?vid=3'">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">18:42</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Forbidden Passions <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 76K views</div>
-                    </div>
-                </div>
-
-                <div class="vd-card" onclick="window.location.href='play.html?vid=4'">
-                    <div class="vd-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">29:17</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Secret Fantasies <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 64K views</div>
-                    </div>
-                </div>
-                    <div class="vd-card" onclick="window.location.href='play.html?vid=5'">
-                    <div class="vd-thumbnail">
-                        <img src="https://imgs.search.brave.com/9CJ05fuplD-w00Rk9JAcVK-CGKNWrK0f8594ygwnx_w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pYy12/dC1uc3MueGhjZG4u/Y29tL2EvWVRRMU9E/WmtOams1WXpnNFpU/VmxZV00zWVRnMU1q/Y3lZakEyTWpsbVpH/TS9zKHc6MTI4MCxo/OjcyMCksanBlZy8w/MTcvNTQxLzE3MC8x/MjgweDcyMC4yLmpw/Zw">
-                        <div class="vd-tag-premium">PREMIUM</div><div class="vd-tag-duration">29:17</div>
-                        <div class="vd-play-btn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                    </div>
-                    <div class="vd-info">
-                        <div class="vd-title-text">Secret Fantasies <svg class="rl-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                        <div class="vd-views-text"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 64K views</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bottom-features">
-            <div class="b-feature"><div class="b-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="b-text"><h4>Daily Updates</h4><p>Fresh content every day</p></div></div>
-            <div class="b-feature"><div class="b-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><div class="b-text"><h4>Top Creators</h4><p>Verified & premium creators</p></div></div>
-            <div class="b-feature"><div class="b-icon"><span style="font-weight: 700; font-size: 12px;">4K</span></div><div class="b-text"><h4>High Quality</h4><p>HD/4K Experience</p></div></div>
-            <div class="b-feature"><div class="b-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="b-text"><h4>Unmatched Privacy</h4><p>Your privacy is our priority</p></div></div>
-        </div>
-    </div>
-
-    <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById("password-input");
-            const toggleBtn = document.getElementById("toggle-password-btn");
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>';
-            } else {
-                passwordInput.type = "password";
-                toggleBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
-            }
-        }
-
-        function checkPassword() {
-            const userInput = document.getElementById("password-input").value;
-            const correctPassword = "Exclusive@15D"; 
-            if (userInput === correctPassword) {
-                const inputWrapper = document.getElementById("input-wrapper");
-                const welcomeSplash = document.getElementById("welcome-splash");
-                const lockScreen = document.getElementById("lock-screen");
-                const mainContent = document.getElementById("main-content");
-                sessionStorage.setItem("unlocked", "true"); 
-
-                inputWrapper.style.opacity = "0";
-                inputWrapper.style.transform = "scale(0.95)";
-                
-                setTimeout(() => {
-                    inputWrapper.style.display = "none";
-                    welcomeSplash.style.display = "flex";
-                    setTimeout(() => { welcomeSplash.style.opacity = "1"; }, 50);
-                    setTimeout(() => {
-                        lockScreen.style.opacity = "0";
-                        setTimeout(() => {
-                            lockScreen.style.display = "none";
-                            mainContent.style.display = "block";
-                        }, 800); 
-                    }, 2500); 
-                }, 400); 
-            } else {
-                const errorMsg = document.getElementById("error-msg");
-                errorMsg.style.display = "block";
-                document.getElementById("password-input").value = "";
-                const box = document.getElementById("main-lock-box");
-                box.style.transform = "translateX(-10px)";
-                setTimeout(() => box.style.transform = "translateX(10px)", 100);
-                setTimeout(() => box.style.transform = "translateX(-10px)", 200);
-                setTimeout(() => box.style.transform = "translateX(0)", 300);
-            }
-        }
-
-        window.onload = function() {
-            if (sessionStorage.getItem("unlocked") === "true") {
-                document.getElementById("lock-screen").style.display = "none";
-                document.getElementById("main-content").style.display = "block";
-            }
-        }
-
-        document.getElementById("password-input").addEventListener("keyup", function(event) {
-            if (event.key === "Enter") checkPassword();
-        });
-    </script>
-</body>
-</html>
+        .vd-play-overlay { position: absolute; right: 15%; top: 50%; transform
