@@ -32,10 +32,6 @@
         
         .hero { display: flex; padding: 80px 5%; min-height: 100vh; position: relative; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
 
-        /* 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇 */
-        /* ======================================================================= */
-        /* YAHAN PAR APNI HOME PAGE KI BACKGROUND IMAGE KI LINK DAALEIN (hero-bg-img) */
-        /* ======================================================================= */
         .hero-bg-img { 
             position: absolute; 
             top: 0; 
@@ -50,7 +46,6 @@
             background-position: center; 
             background-repeat: no-repeat;
         }
-        /* 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆 */
 
         .hero-content { max-width: 600px; z-index: 2; }
         .hero-tag { color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
@@ -81,15 +76,22 @@
         .card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 30px; }
         .btn-explore { padding: 12px 25px; border: none; border-radius: 8px; color: white; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
         .card-2 .btn-explore { background: var(--btn-blue); }
-        .mockup-container { position: absolute; right: 0px; bottom: -20px; width: 45%; height: 110%; z-index: 1; }
-
+        
         /* 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇 */
         /* ======================================================================= */
         /* YAHAN PAR 'PREMIUM VIDEOS' CARD KI CHOTI IMAGE KI LINK DAALEIN          */
         /* ======================================================================= */
         .card-2 .mockup-container { 
-            background: url('https://imgs.search.brave.com/DTyrC6rn-VD_2NWZsSRr_clwFkAAAZ4RwMrQnnW632A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG5p/LmxhbWFsaW5rcy5j/b20vNDYwLzEvMTI0/LzU2MzU5NzU1LzU2/MzU5NzU1XzAxMV8z/YmFmLmpwZw"; 
-            background-size: cover; border-radius: 10px; border: 3px solid #222; height: 70%; bottom: 15%; right: 30px; width: 40%; display: flex; align-items: center; justify-content: center; 
+            /* YAHAN URL KE ANDAR APNI IMAGE LINK DAALEIN: */
+            background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'); 
+            
+            /* Ye universal settings kisi bhi image ko set kar dengi */
+            background-size: cover !important; 
+            background-position: center center !important; 
+            background-repeat: no-repeat !important;
+            
+            position: absolute; right: 0px; bottom: -20px; z-index: 1;
+            border-radius: 10px; border: 3px solid #222; height: 70%; bottom: 15%; right: 30px; width: 40%; display: flex; align-items: center; justify-content: center; 
         }
         /* 👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆 */
 
@@ -108,7 +110,7 @@
             .dept-card { flex-direction: column; padding: 30px 20px; text-align: center; } 
             .card-content { max-width: 100%; margin-bottom: 20px; } 
             .card-tag { justify-content: center; }
-            .card-2 .mockup-container, .mockup-container { position: relative; width: 100%; height: 220px; right: 0; bottom: 0; margin-top: 20px; display: flex !important; }
+            .card-2 .mockup-container { position: relative; width: 100%; height: 220px; right: 0; bottom: 0; margin-top: 20px; display: flex !important; }
             .bottom-features { flex-direction: column; align-items: center; }
             .b-feature { width: 240px; justify-content: flex-start; text-align: left; }
         }
